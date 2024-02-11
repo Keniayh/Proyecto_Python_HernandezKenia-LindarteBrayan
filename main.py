@@ -30,10 +30,29 @@ while fin == True:
         print("")
         print(" Bienvenido ", nameModCA)
         print("¿A qué área deseas ingresar: ")
-        print("1. Trainers \t2. Campers \tVolver al inicio")
-        opcionesCA = input(int(("Ingresa el número según el área a la cual deseas ingresar: ")))
-        
+        print("1. Trainers \t2. Campers \t3. Reportes \t4. Regresar al incio")
+        optionsAC = input(int(("Ingresa el número según el área a la cual deseas ingresar: ")))
+        if optionsAC == "1":
+            print("Has ingresado a la sección de Trainers.")
+            print("¿Qué deseas hacer?")
+            print("1. Crear nuevo Trainer \t2. Asignar horario \t3.Ver Trainers \t4.Regresar al inicio")
+            
+            
     elif rta == 2:
         print("-------------------------")
-        print("-    ROL  ")
-        
+        print("-      ROL TRAINER      -")
+        print("-------------------------")
+        print("")
+        print("¿Qué deseas hacer?")
+        print("1. Horario \t2. Volver al inicio")
+        optionsT = input(int("Ingresa el número según el área a la cual deseas ingresar: "))
+        if optionsT == "1":
+            print("Has ingresado a la sección de Horarios")
+            print("Completa la siguiente información para saber tu hoario de trabajo")
+            limpiarPantalla()
+            print("Ingresa tus datos:")
+            trainerN = input("Ingresa tu/s nombre/s: ")
+            trainerA = input("Ingresa tu/s apellido/s: ")
+    else:
+        if rta == "3":
+            fin = False
