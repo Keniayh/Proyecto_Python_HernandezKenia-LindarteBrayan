@@ -1,0 +1,45 @@
+[
+    {
+        "campers": [
+            {
+                "id": 11,
+                "Nombres": " ",
+                "Apellidos": " ",
+                "Direccion": " ",
+                "Acudiente": " ",
+                "Contacto": {
+                    "Celular": 656410,
+                    "Fijo": 4544
+                },
+                "Estado": " ",
+                "Riesgo": " "
+            }
+        ]
+    },
+    {
+        "id": 45454,
+        "Nombres": "callate",
+        "Apellidos": "sapoperro",
+        "Direcci\u00f3n": "wfef 54",
+        "Acudiente": "aire",
+        "Contacto": {
+            "Celular": 445534,
+            "Fijo": 64512
+        },
+        "Estado": "inscrito",
+        "Riesgo": "bajo"
+    },
+    {
+        "id": 5534541,
+        "Nombres": "Dios",
+        "Apellidos": "Permita",
+        "Direcci\u00f3n": "la situa 4321",
+        "Acudiente": "sapoperro",
+        "Contacto": {
+            "Celular": 21564541,
+            "Fijo": 64541
+        },
+        "Estado": "inscrito",
+        "Riesgo": "bajo"
+    }
+]
