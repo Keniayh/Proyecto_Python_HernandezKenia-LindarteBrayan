@@ -23,13 +23,16 @@ def add_campers():
         "Riesgo": input('Riesgo: ')
     }
     
-    # Agregar el nuevo estudiante a la lista existente
+   # Agregar el nuevo estudiante a la lista existente
     data_existing.append(new_camper)
     
     # Escribir los datos en el archivo JSON
     with open('campers.json', 'w') as archivo:
         json.dump(data_existing, archivo)
-    
-    
-# Ejemplo de uso
 add_campers()
+    
+def addRuta():
+   with open ('rutasEntreno', 'r') as rutas:
+       
+
+            

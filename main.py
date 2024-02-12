@@ -6,8 +6,6 @@ def limpiarPantalla():
     else:
         os.system('clear')
 
-fin = True
-while fin == True:
 
     print("-----------------------------")
     print("-       BIENVENIDO A        -")
