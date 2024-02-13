@@ -29,19 +29,22 @@ def add_campers():
     # Escribir los datos en el archivo JSON
     with open('campers.json', 'w') as archivo:
         json.dump(data_existing, archivo)
-add_campers()
+
 
 def newRuta():
     try:
-        with open ('rutasEntreno.json', 'w') as archivo:
-            data_existing = json.load(archivo)
+        with open ('rutasEntreno.json', 'r') as archivo:
+            rutas = json.load(archivo)
     except FileNotFoundError:
-        data_existing = []
-    
+        rutas = []
+   
     new_Ruta = {
-        "Nombre Ruta": input("Nombre ruta: ")
+        "nombre ruta": input("Nombre ruta: ")
     }
+    
 
-    data_existing.append(newRuta)
-    with open ('rutasEntreno', 'w') as archivo:
-        json.dump(data_existing, archivo)
+    rutas.append(new_Ruta)
+    with open ('rutasEntreno.json', 'w') as archivo:
+        json.dump(rutas, archivo, indent = 4)
+        
+newRuta()
