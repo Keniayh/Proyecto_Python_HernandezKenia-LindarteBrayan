@@ -35,9 +35,9 @@ def add_campers():
     for camper_list in data_existing:
         for camper_dict in camper_list.get('campers', []):
             camper_dict['id'] = new_camper_id
-    ## Evaluar si el camper pasa a inscrito
+    ## Evaluar si el camper pasa a inscrito???????????????
     if check_fields_complete(new_camper):
-        new_camper["Estado"] = 'En proceso de inscripcion'
+        new_camper["Estado"] = 'En proceso de ingreso'
         data_existing.append({"campers": [new_camper]})
     else: 
         print("No se puede inscribir faltan datos")
@@ -62,4 +62,4 @@ def add_campers():
         json.dump(notas_data, archivo)
 
 # Ejemplo de uso
-add_campers()
+
