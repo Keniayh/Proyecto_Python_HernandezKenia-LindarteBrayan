@@ -29,22 +29,50 @@ def add_campers():
     # Escribir los datos en el archivo JSON
     with open('campers.json', 'w') as archivo:
         json.dump(data_existing, archivo)
-add_campers()
 
-def addRuta():
-   with open ('rutasEntreno', 'r') as rutas:
-       rutica = json.loand(rutas)
+
+def newRuta():
+    try:
+        with open ('rutasEntreno.json', 'r') as archivo:
+            rutas = json.load(archivo)
+    except FileNotFoundError:
+        rutas = []
+   
+    new_Ruta = {
+        "nombre ruta": input("Nombre ruta: ")
+    }
     
-   newRuta = input("Ingrese el nombre de la nueva ruta, ('ej. Ruta x')")
+
+    rutas.append(new_Ruta)
+    with open ('rutasEntreno.json', 'w') as archivo:
+        json.dump(rutas, archivo, indent = 4)
+        
+#CRUD TRAINERS
+
+def add_trainers():
+    # Cargar el diccionario existente
+    try:
+        with open('trainers.json', 'r') as archivo:
+            data_existing = json.load(archivo)
+    except FileNotFoundError:
+        data_existing = []
     
-   if newRuta in rutica[newRuta]:
-        print("!Oh, lo siento, ya has creado esa Ruta¡")
-   else:
-       rutica["Rutas"][newRuta]
-       x = input("")
-       rutica["Rutas"][newRuta] = []
-       with open('rutasEntreno.json', 'w') as grupsFiles:
-           json.dump(rutica, grupsFiles, indent = 2)
-           
-       print("La Ruta ha sido creada exitosamente")
-addRuta()
+    # Solicitar datos del nuevo trainer
+    new_trainer = {
+        "id": int(input('Identificación: ')),
+        "Nombres": input('Nombres: '),
+        "Apellidos": input('Apellidos: '),
+        "Contacto": int(input("Número de telefono: ")),
+        "Horario": {
+            "Grupo": input("Grupo: "),
+            "Area_Entrenamiento": input("Area de entrenamiento: "),
+            "Time": input("Ingrese la hora de inicio (HH:MM) - hora final (HH:MM): ") 
+        },
+    }
+    
+    # Agregar el nuevo estudiante a la lista existente
+    data_existing.append(new_trainer)
+    
+    # Escribir los datos en el archivo JSON
+    with open('trainers.json', 'w') as archivo:
+        json.dump(data_existing, archivo)

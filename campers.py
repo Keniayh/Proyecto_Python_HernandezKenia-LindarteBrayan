@@ -33,7 +33,7 @@ def add_campers():
     
     ## Evaluar si el camper pasa a inscrito
     if check_fields_complete(new_camper):
-        new_camper["Estado"] = 'inscrito'
+        new_camper["Estado"] = 'En proceso de inscripcion'
         data_existing.append({"campers": [new_camper]})
     else: 
         print("No se puede inscribir faltan datos")
@@ -58,4 +58,4 @@ def add_campers():
         json.dump(notas_data, archivo)
 
 # Ejemplo de uso
-add_campers()
+
