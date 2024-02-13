@@ -35,6 +35,12 @@ def add_campers():
     for camper_list in data_existing:
         for camper_dict in camper_list.get('campers', []):
             camper_dict['id'] = new_camper_id
+    ## Evaluar si el camper pasa a inscrito
+    if check_fields_complete(new_camper):
+        new_camper["Estado"] = 'En proceso de inscripcion'
+        data_existing.append({"campers": [new_camper]})
+    else: 
+        print("No se puede inscribir faltan datos")
     
     # Escribir los datos actualizados de campers en el archivo JSON
     with open('campers.json', 'w') as archivo:
