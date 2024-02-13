@@ -9,19 +9,21 @@ def add_trainers():
         data_existing = []
     
     # Solicitar datos del nuevo trainer
+    nombre = input('Nombres: ')
+    grupo_por_defecto = nombre[0].upper() + "1"  # Tomar la inicial y añadir "1"
     new_trainer = {
-        "id": int(input('Identificación: ')),
-        "Nombres": input('Nombres: '),
+        "Nombres": nombre,
         "Apellidos": input('Apellidos: '),
+        "id": int(input('Identificación: ')),
         "Contacto": int(input("Número de telefono: ")),
         "Horario": {
-            "Grupo": input("Grupo: "),
+            "Grupo": grupo_por_defecto,
             "Area_Entrenamiento": input("Area de entrenamiento: "),
             "Time": input("Ingrese la hora de inicio (HH:MM) - hora final (HH:MM): ") 
         },
     }
     
-    # Agregar el nuevo estudiante a la lista existente
+    # Agregar al nuevo trainer a la lista existente
     data_existing.append(new_trainer)
     
     # Escribir los datos en el archivo JSON

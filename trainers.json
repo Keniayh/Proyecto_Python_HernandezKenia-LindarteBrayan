@@ -35,5 +35,38 @@
             "Area_Entrenamiento": "hdhr",
             "Time": "06:00 - 10:00"
         }
+    },
+    {
+        "id": 10215412,
+        "Nombres": "pedrin",
+        "Apellidos": "rosales",
+        "Contacto": 316541215,
+        "Horario": {
+            "Grupo": "1",
+            "Area_Entrenamiento": "sputnik",
+            "Time": "06:00- 10:00"
+        }
+    },
+    {
+        "id": 101236641,
+        "Nombres": "Vagal",
+        "Apellidos": "jbjv",
+        "Contacto": 3541451,
+        "Horario": {
+            "Grupo": "V1",
+            "Area_Entrenamiento": "cvasc",
+            "Time": "06:00 - 10:00"
+        }
+    },
+    {
+        "Nombres": "daza",
+        "Apellidos": "daza",
+        "id": 2032031,
+        "Contacto": 32121561,
+        "Horario": {
+            "Grupo": "D1",
+            "Area_Entrenamiento": "cjacn",
+            "Time": "06:00 - 10:00"
+        }
     }
 ]

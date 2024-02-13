@@ -1,18 +1,12 @@
-def prueba_inicial(pru_1,pru_2):
-
-    pru_1 = int(input("Resultado prueba 1 "))
-    pru_2 = int(input("Resultado prueba 2 "))
-
-    promedio = (pru_1 + pru_2)/2
-
-    if promedio >= 60:
-        print("Estas aprobado")
-    else:
-        print("Estas reprobado")
-
 import json
 
 def add_notas():
+    # Cargar el diccionario existente de campers
+    try:
+        with open('campers.json', 'r') as archivo:
+            data_existing = json.load(archivo)
+    except FileNotFoundError:
+        data_existing = []
     try:
         # Cargar los datos existentes de notas.json
         with open('notas.json', 'r') as archivo:
@@ -35,7 +29,19 @@ def add_notas():
             print(f'El promedio es: {promedio}')
             # Agregar el promedio como un nuevo campo en el diccionario
             entry["promedio"] = promedio
-            break  # Terminar el bucle una vez que se haya encontrado y actualizado el estudiante
+
+          # Buscar el estudiante por su ID y cambiar estado 
+            for camper_list in data_existing:
+                for camper in camper_list.get('campers', []):
+                    if camper["id"] == id_estudiante:
+                        if promedio >= 60:
+                            camper["Estado"] = "aprobado"
+                            break  # Terminar el bucle una vez que se haya encontrado y actualizado el estado
+                
+            break
+    # Escribir los datos actualizados en campers.json
+    with open('campers.json', 'w') as archivo:
+        json.dump(data_existing, archivo)
     
     # Escribir los datos actualizados en notas.json
     with open('notas.json', 'w') as archivo:
