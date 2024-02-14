@@ -91,8 +91,17 @@ def add_trainers():
 def matriculados():
     try:
         with open('campers.json', 'r') as archivo:
-            maC = json.load(archivo)
+            data = json.load(archivo)
     except FileNotFoundError:
-        maC = []
+        data = []
+    try:
+        with open('matriculados.json', 'r') as archivo:
+            matri = json.load(archivo)
+    except FileNotFoundError:
+        matri = []
     
+    for entry in data[7].get('campers',["Estado"]):
+        if entry["Estado"] == "aprobado":
+            
+
 #def horarioTrainers():

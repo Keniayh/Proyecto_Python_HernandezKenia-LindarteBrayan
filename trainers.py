@@ -1,5 +1,5 @@
 import json
-
+#AGREGAR TRAINER
 def add_trainers():
     # Cargar el diccionario existente
     try:
@@ -29,7 +29,7 @@ def add_trainers():
     # Escribir los datos en el archivo JSON
     with open('trainers.json', 'w') as archivo:
         json.dump(data_existing, archivo)
-    
+#EDITAR HORARIO
 def horario_trainers():
     #Cargar diccionario 
     with open('trainers.json', 'r') as archivo:
@@ -58,6 +58,8 @@ def horario_trainers():
     #Reescribir los datos actualizados
     with open('trainers.json', 'w')as archivo:
         json.dump(data_existing, archivo)
+
+# ver trainers
 def see_trainer():
     #Cargar diccionario
     with open('trainers.json', 'r') as archivo:
