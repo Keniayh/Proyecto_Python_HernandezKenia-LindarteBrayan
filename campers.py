@@ -58,4 +58,3 @@ def add_campers():
         json.dump(notas_data, archivo)
 
 # Ejemplo de uso
-

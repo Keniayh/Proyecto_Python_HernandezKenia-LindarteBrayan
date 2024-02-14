@@ -1,4 +1,4 @@
-import json
+
 def letrerito():
     print("------------------------------")
     print("-       ROL COORDINACIÓN     -")
@@ -10,4 +10,5 @@ def letrero():
     print("-         ROL TRAINERS       -")
     print("------------------------------")
 
-    
+
+

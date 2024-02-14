@@ -1,8 +1,11 @@
 import os
 import json
+from pprint import pprint
 import campers as moca
 import modulo as mod
 import fuctionMenu as lejo
+import notas as nt
+
 def limpiarPantalla():
     if os.name == 'nt':
         os.system('cls')
@@ -40,6 +43,15 @@ while fin == True:
             print("Has ingresado a la sección de Trainers.")
             print("¿Qué deseas hacer?")
             print("1. Crear nuevo Trainer \t2. Asignar horario \t3.Ver Trainers \t4.Regresar al inicio")
+            optionTr = input("Digite el número según la opción a la deseas ingresar: ")
+            if optionTr == '1':
+                mod.add_trainers()
+            elif optionTr == '2':
+                print("")
+            elif optionTr == '3':
+                print("")
+            elif optionTr == '4':
+                print("")
         elif optionsAC == '2':
             lejo.letrerito()
             print("Has ingresado a la sección de Campers")
@@ -50,15 +62,21 @@ while fin == True:
             if optionsA == '1':
                 print("Favor ingresar datos del estudiante: ")
                 moca.add_campers()
+            elif optionsA == '2':
+                print("aun no")
+            elif  optionsA == '3':
+                print("")
+            elif optionsA == '4':
+                nt.add_notas()
         elif optionsAC == '3':
             print("Has ingresado a la sección de Rutas de entrenamiento")
             print("¿Qué deseas hacer?")
-            print("1. Visualizar las Rutas \t 2. Crear nuevas rutas de entrenamiento")
+            print("1. Motrar Rutas \t 2. Crear rutas de entrenamiento")
             optionR = input("Digite el número según la opción a la que deseas ingresar: ")
             if optionR == '1':
-                print(" aun no")
+                mod.viewR()
             elif optionR == '2':
-                print("Ingresa el nombre de la  nueva ruta que deseas crear")
+                print("Has ingresado a la sección de crear rutas.")
                 mod.newRuta()
     elif rta == '2':
         lejo.letrero()

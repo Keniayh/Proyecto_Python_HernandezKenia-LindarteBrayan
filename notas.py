@@ -47,6 +47,3 @@ def add_notas():
     with open('notas.json', 'w') as archivo:
         json.dump(notas_data, archivo)
 
-# Ejemplo de uso
-add_notas()
-

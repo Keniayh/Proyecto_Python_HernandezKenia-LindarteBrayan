@@ -1,5 +1,5 @@
 import json
-
+from pprint import pprint
 def add_campers():
     # Cargar el diccionario existente
     try:
@@ -29,7 +29,7 @@ def add_campers():
     # Escribir los datos en el archivo JSON
     with open('campers.json', 'w') as archivo:
         json.dump(data_existing, archivo)
-
+#CRUD RUTAS
 
 def newRuta():
     try:
@@ -37,16 +37,27 @@ def newRuta():
             rutas = json.load(archivo)
     except FileNotFoundError:
         rutas = []
-   
-    new_Ruta = {
-        "nombre ruta": input("Nombre ruta: ")
-    }
+    a = int(input("Ingrese el número ed notas que desea crear: "))
     
-
-    rutas.append(new_Ruta)
+    for i in range (a):
+        new_Ruta = {
+            "nombre ruta": input(f"Nombre ruta {i+1} :")
+        }
+        rutas.append(new_Ruta)
+        
     with open ('rutasEntreno.json', 'w') as archivo:
         json.dump(rutas, archivo, indent = 4)
-        
+#VISUALIZAR RUTAS
+
+
+def viewR():
+    with open("rutasEntreno.json", 'r') as archivo:
+        rutas = json.load(archivo)
+    #print(json.dumps(rutas, indent = 4))
+    #imprime el contenido del json como una lista en el terminal
+    pprint(rutas)
+
+   
 #CRUD TRAINERS
 
 def add_trainers():
@@ -76,3 +87,5 @@ def add_trainers():
     # Escribir los datos en el archivo JSON
     with open('trainers.json', 'w') as archivo:
         json.dump(data_existing, archivo)
+
+#def horarioTrainers():
