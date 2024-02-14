@@ -1,1 +1,167 @@
-[{"prueba_campers_inicial": [{"id": 111, "nota_teorica": 50, "nota_practica": 70}, {"id": 1313, "nota_teorica": 70, "nota_practica": 50}, {"id": 10120, "nota_teorica": 80, "nota_practica": 20}, {"id": 4040, "nota_teorica": 90, "nota_practica": 50}, {"id": 5050, "nota_teorica": 75, "nota_practica": 50, "promedio": 62.5}, {"id": 6060, "nota_teorica": 80, "nota_practica": 30, "promedio": 55.0}, {"id": 7070, "nota_teorica": 90, "nota_practica": 60, "promedio": 75.0}, {"id": 4545}, {"id": 6969, "nota_teorica": 80, "nota_practica": 32, "promedio": 56.0}, {"id": 3586, "nota_teorica": 69, "nota_practica": 58, "promedio": 63.5}, {"id": 3212454}, {"id": 75, "nota_teorica": 90, "nota_practica": 63, "promedio": 76.5}, {"id": 89, "nota_teorica": 50, "nota_practica": 80, "promedio": 65.0}, {"id": 2141, "nota_teorica": 90, "nota_practica": 61, "promedio": 75.5}, {"id": 1014, "nota_teorica": 90, "nota_practica": 59, "promedio": 74.5}, {"id": 478, "nota_teorica": 90, "nota_practica": 50, "promedio": 70.0}, {"id": 4546, "nota_teorica": 90, "nota_practica": 70, "promedio": 80.0}, {"id": 4748, "nota_teorica": 90, "nota_practica": 50, "promedio": 70.0}], "prueba_rendimiento": [{"id": 222, "prueba_teorica": 70, "prueba_practica": 50, "trabajo_clase": 40}, {"id": 1313, "nota_teorica": 0, "nota_practica": 0}, {"id": 10120, "nota_teorica": 0, "nota_practica": 0}, {"id": 4040}, {"id": 5050}, {"id": 6060}, {"id": 7070}, {"id": 4545}, {"id": 6969}, {"id": 3586}, {"id": 3212454}, {"id": 75}, {"id": 89}, {"id": 2141}, {"id": 1014}, {"id": 478}, {"id": 4546}, {"id": 4748}]}]
+[
+  {
+    "prueba_campers_inicial": [
+      {
+        "id": 111,
+        "nota_teorica": 50,
+        "nota_practica": 70
+      },
+      {
+        "id": 1313,
+        "nota_teorica": 70,
+        "nota_practica": 50
+      },
+      {
+        "id": 10120,
+        "nota_teorica": 80,
+        "nota_practica": 20
+      },
+      {
+        "id": 4040,
+        "nota_teorica": 90,
+        "nota_practica": 50
+      },
+      {
+        "id": 5050,
+        "nota_teorica": 75,
+        "nota_practica": 50,
+        "promedio": 62.5
+      },
+      {
+        "id": 6060,
+        "nota_teorica": 80,
+        "nota_practica": 30,
+        "promedio": 55.0
+      },
+      {
+        "id": 7070,
+        "nota_teorica": 90,
+        "nota_practica": 60,
+        "promedio": 75.0
+      },
+      {
+        "id": 4545
+      },
+      {
+        "id": 6969,
+        "nota_teorica": 80,
+        "nota_practica": 32,
+        "promedio": 56.0
+      },
+      {
+        "id": 3586,
+        "nota_teorica": 69,
+        "nota_practica": 58,
+        "promedio": 63.5
+      },
+      {
+        "id": 3212454
+      },
+      {
+        "id": 75,
+        "nota_teorica": 90,
+        "nota_practica": 63,
+        "promedio": 76.5
+      },
+      {
+        "id": 89,
+        "nota_teorica": 50,
+        "nota_practica": 80,
+        "promedio": 65.0
+      },
+      {
+        "id": 2141,
+        "nota_teorica": 90,
+        "nota_practica": 61,
+        "promedio": 75.5
+      },
+      {
+        "id": 1014,
+        "nota_teorica": 90,
+        "nota_practica": 59,
+        "promedio": 74.5
+      },
+      {
+        "id": 478,
+        "nota_teorica": 90,
+        "nota_practica": 50,
+        "promedio": 70.0
+      },
+      {
+        "id": 4546,
+        "nota_teorica": 90,
+        "nota_practica": 70,
+        "promedio": 80.0
+      },
+      {
+        "id": 4748,
+        "nota_teorica": 90,
+        "nota_practica": 50,
+        "promedio": 70.0
+      }
+    ],
+    "prueba_rendimiento": [
+      {
+        "id": 222,
+        "prueba_teorica": 70,
+        "prueba_practica": 50,
+        "trabajo_clase": 40
+      },
+      {
+        "id": 1313,
+        "nota_teorica": 0,
+        "nota_practica": 0
+      },
+      {
+        "id": 10120,
+        "nota_teorica": 0,
+        "nota_practica": 0
+      },
+      {
+        "id": 4040
+      },
+      {
+        "id": 5050
+      },
+      {
+        "id": 6060
+      },
+      {
+        "id": 7070
+      },
+      {
+        "id": 4545
+      },
+      {
+        "id": 6969
+      },
+      {
+        "id": 3586
+      },
+      {
+        "id": 3212454
+      },
+      {
+        "id": 75
+      },
+      {
+        "id": 89
+      },
+      {
+        "id": 2141
+      },
+      {
+        "id": 1014
+      },
+      {
+        "id": 478
+      },
+      {
+        "id": 4546
+      },
+      {
+        "id": 4748
+      }
+    ]
+  }
+]
