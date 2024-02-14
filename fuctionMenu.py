@@ -13,14 +13,16 @@ def letrero():
 def reports():
     repor = input("Digite el número según la sección a la que deseas ingresar: ")
     if repor == '1':
-        mod.viewMa()
+        print("")
     elif repor == '2':
-        print("")
+        mod.viewMa()
     elif repor == '3':
-        print("")
+        mod.viewTr()
     elif repor == '4':
         print("")
     elif repor == '5':
         print("")
     elif repor == '6':
         print("")
+
+reports()

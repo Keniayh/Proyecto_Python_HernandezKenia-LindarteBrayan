@@ -37,7 +37,7 @@ def newRuta():
             rutas = json.load(archivo)
     except FileNotFoundError:
         rutas = []
-    a = int(input("Ingrese el número ed notas que desea crear: "))
+    a = int(input("Ingrese el número  de rutas que desea crear: "))
     
     for i in range (a):
         new_Ruta = {
@@ -89,7 +89,13 @@ def add_trainers():
     # Escribir los datos en el archivo JSON
     with open('trainers.json', 'w') as archivo:
         json.dump(data_existing, archivo)
+#VISUALIZAR A LOS TRAINERS 
 
+def viewTr():
+    with open('trainers.json', 'r') as archivo:
+        data = json.load(archivo)
+    pprint(data)
+    
 #PASAR LOS APROBADOS DEL JSON DE CAMPER AL JSON DE MATRICULADOS
 def matriculados():
     try:
