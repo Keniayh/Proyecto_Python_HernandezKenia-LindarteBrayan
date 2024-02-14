@@ -1,4 +1,67 @@
-
 {
-    
+  "camper_1": {
+    "id": 478,
+    "Nombres": " ",
+    "Apellidos": " ",
+    "Direccion": " ",
+    "Acudiente": " ",
+    "Contacto": {
+      "Celular": 656410,
+      "Fijo": 4544
+    },
+    "Riesgo": " ",
+    "Estado": "aprobado"
+  },
+  "camper_2": {
+    "id": 478,
+    "Nombres": "vgwerwg",
+    "Apellidos": "efefef",
+    "Direccion": "fefe 54",
+    "Acudiente": "wefweg",
+    "Contacto": {
+      "Celular": 31215454540,
+      "Fijo": 64501548
+    },
+    "Riesgo": "alto",
+    "Estado": "aprobado"
+  },
+  "camper_3": {
+    "id": 478,
+    "Nombres": "vrwvrwv",
+    "Apellidos": "vwvwvr",
+    "Direccion": "fcwerv 69",
+    "Acudiente": "fwerv",
+    "Contacto": {
+      "Celular": 31545154,
+      "Fijo": 6154412
+    },
+    "Riesgo": "alto",
+    "Estado": "aprobado"
+  },
+  "camper_4": {
+    "id": 4546,
+    "Nombres": "brehergr",
+    "Apellidos": "fwgrwgr",
+    "Direccion": "fwfew 458",
+    "Acudiente": "ewgfwg",
+    "Contacto": {
+      "Celular": 3121544105,
+      "Fijo": 6414812
+    },
+    "Riesgo": "bajo",
+    "Estado": "aprobado"
+  },
+  "camper_5": {
+    "id": 4748,
+    "Nombres": "herr",
+    "Apellidos": "htjhth",
+    "Direccion": "gdf",
+    "Acudiente": "bdn",
+    "Contacto": {
+      "Celular": 1512,
+      "Fijo": 151
+    },
+    "Riesgo": "hdhdr",
+    "Estado": "aprobado"
+  }
 }
