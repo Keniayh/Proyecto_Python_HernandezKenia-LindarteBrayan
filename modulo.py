@@ -88,4 +88,11 @@ def add_trainers():
     with open('trainers.json', 'w') as archivo:
         json.dump(data_existing, archivo)
 
+def matriculados():
+    try:
+        with open('campers.json', 'r') as archivo:
+            maC = json.load(archivo)
+    except FileNotFoundError:
+        maC = []
+    
 #def horarioTrainers():
