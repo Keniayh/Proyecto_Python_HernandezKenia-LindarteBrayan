@@ -29,6 +29,31 @@ def add_trainers():
     # Escribir los datos en el archivo JSON
     with open('trainers.json', 'w') as archivo:
         json.dump(data_existing, archivo)
+    ##Agregar nuevo grupo a trainer 
+def add_new_group_to_trainer():
+    # Cargar el diccionario existente de entrenadores
+    try:
+        with open('trainers.json', 'r') as archivo:
+            data_existing = json.load(archivo)
+    except FileNotFoundError:
+        data_existing = []
+    
+    # Solicitar el ID del entrenador
+    id_entrenador = int(input('Ingrese el ID del entrenador: '))
+    
+    # Buscar el entrenador por su ID y agregar otro grupo
+    for trainer in data_existing:
+        if trainer.get('id') == id_entrenador:
+            nuevo_grupo = input('Ingrese el nuevo grupo para el entrenador: ')
+            trainer['Horario']['Grupo'] += ', ' + nuevo_grupo
+            break  # Terminar el bucle una vez que se haya encontrado y actualizado el entrenador
+    
+    # Escribir los datos actualizados en trainers.json
+    with open('trainers.json', 'w') as archivo:
+        json.dump(data_existing, archivo, indent=4)
+
+# Ejemplo de uso
+
 #EDITAR HORARIO
 def horario_trainers():
     #Cargar diccionario 
@@ -70,4 +95,4 @@ def see_trainer():
         print(json.dumps(trainer))
     
 # Ejemplo de uso
-horario_trainers()
+see_trainer()

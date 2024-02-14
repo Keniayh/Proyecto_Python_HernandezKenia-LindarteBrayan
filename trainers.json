@@ -68,5 +68,38 @@
             "Area_Entrenamiento": "cjacn",
             "Time": "06:00 - 10:00"
         }
+    },
+    {
+        "Nombres": "Jolver",
+        "Apellidos": "felipino",
+        "id": 88252610,
+        "Contacto": 3114578962,
+        "Horario": {
+            "Grupo": "J1, J2",
+            "Area_Entrenamiento": "Apolo",
+            "Time": "06:00 - 10:00"
+        }
+    },
+    {
+        "Nombres": "Miguel",
+        "Apellidos": "developer",
+        "id": 100963541,
+        "Contacto": 3236541208,
+        "Horario": {
+            "Grupo": "M1",
+            "Area_Entrenamiento": "Sputnik",
+            "Time": "06:00 - 10:00"
+        }
+    },
+    {
+        "Nombres": "Pedro",
+        "Apellidos": "Gomez",
+        "id": 1010457829,
+        "Contacto": 3023019865,
+        "Horario": {
+            "Grupo": "P1",
+            "Area_Entrenamiento": "artemis",
+            "Time": "06:00 - 10:00"
+        }
     }
 ]
