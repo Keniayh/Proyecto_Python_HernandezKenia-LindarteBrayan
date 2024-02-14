@@ -32,7 +32,7 @@ while fin == True:
         print("")
         print(" Bienvenido ", nameModCA)
         print("¿A qué área deseas ingresar: ")
-        print("1. Trainers \t2. Campers \n3. Rutas de entrenamiento  \t4. Reportes \t 5. Volver al menú principal")
+        print("1. Trainers \t2. Campers \n3. Rutas de entrenamiento  \t4. Reportes \n5. Volver al menú principal")
         optionsAC = input("Ingresa el número según el área a la cual deseas ingresar: ")
         limpiarPantalla()
         if optionsAC == '1':
@@ -49,41 +49,60 @@ while fin == True:
                     print("")
                 elif optionTr == '3':
                     print("")
-                elif optionTr == '4':
-                    x = False
-    elif optionsAC == '2':
-        while True:
-            lejo.letrerito()
-            print("Has ingresado a la sección de Campers")
-            print("¿Qué deseas hacer?")
-            print("1. Incripciones \t2. Matriculas \n3. Editar información \t4.Notas \n5. Volver al menú anterior \t6. Salir ")
-            optionsA = input("Digite el número según la opción a la que deseas ingresar: ")
-            limpiarPantalla()
-            if optionsA == '1':
-                print("Favor ingresar datos del estudiante: ")
-                moca.add_campers()
-            elif optionsA == '2':
-                print("aun no")
-            elif  optionsA == '3':
-                print("")
-            elif optionsA == '4':
-                nt.add_notas()
-            elif optionsA == '5':
-                break
-            else:
-                if optionsA == '6':
-                    fin = False
-    elif optionsAC == '3':
+                else:
+                    if optionTr == '4':
+                        x = False
+        elif optionsAC == '2':
+            f = True
+            while f == True:
+                lejo.letrerito()
+                print("Has ingresado a la sección de Campers")
+                print("¿Qué deseas hacer?")
+                print("1. Incripciones \t2. Matriculas \n3. Editar información \t4.Notas \n5. Volver al menú anterior ")
+                optionsA = input("Digite el número según la opción a la que deseas ingresar: ")
+                limpiarPantalla()
+                if optionsA == '1':
+                    print("Favor ingresar datos del estudiante: ")
+                    moca.add_campers()
+                elif optionsA == '2':
+                    print("aun no")
+                elif  optionsA == '3':
+                    print("")
+                elif optionsA == '4':
+                    nt.add_notas()
+                else:
+                    if optionsA == '5':
+                        f = False
+        elif optionsAC == '3':
+            n = True
+            while n == True:
+                lejo.letrerito()
 
-        print("Has ingresado a la sección de Rutas de entrenamiento")
-        print("¿Qué deseas hacer?")
-        print("1. Motrar Rutas \t 2. Crear rutas de entrenamiento")
-        optionR = input("Digite el número según la opción a la que deseas ingresar: ")
-        if optionR == '1':
-            mod.viewR()
-        elif optionR == '2':
-            print("Has ingresado a la sección de crear rutas.")
-            mod.newRuta()
+                print("Has ingresado a la sección de Rutas de entrenamiento")
+                print("¿Qué deseas hacer?")
+                print("1. Motrar Rutas \t 2. Crear rutas de entrenamiento \n3. Volver al menú anterior")
+                optionR = input("Digite el número según la opción a la que deseas ingresar: ")
+                limpiarPantalla()
+                if optionR == '1':
+                    lejo.letrerito()
+                    pprint("Rutas de entrenamiento: ")
+                    mod.viewR()
+                elif optionR == '2':
+                    lejo.letrerito()
+                    print("Has ingresado a la sección de crear rutas.")
+                    mod.newRuta()
+                else:
+                    if optionR == '3':
+                        n = False
+        elif optionsAC == '4':
+            
+            lejo.letrerito()
+            print(" Has entrado al la sección de reportes")
+            print("¡Qué deseas ver?")
+            print("1. Campers que se encuentran inscritos \n2. Campers que aprobaron el examen inicial\n3. Entrenadores que se encuentran trabajando con CampusLands")
+            print("4. Campers que se encuentran con bajo rendimiento \n5. Campers y los trainer que se encuentren asociados a una ruta de entrenamiento")
+            print("6. Número de campers que perdieron y aprobaron cada uno de los módulos")
+            lejo.reports()
     elif rta == '2':
         lejo.letrero()
         print("")
@@ -103,3 +122,4 @@ while fin == True:
           
         if rta == '3':
             fin = False
+        break

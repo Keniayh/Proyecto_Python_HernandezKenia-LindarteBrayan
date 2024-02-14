@@ -124,11 +124,24 @@ def matriculados():
     with open('campers.json', 'w') as archivo:
         json.dump(matri, archivo, indent = 2)  
 
-#VER LOS CAMPRS MATRICULADOS, POR ENDE APROBADOS       
-def viewM():
+#VER LOS CAMPRS MATRICULADOS, POR ENDE APROBADOS 
+def viewMa():
+    try:
+        with open('matriculados.json','r') as archivo:
+            matriculados =json.load(archivo)
+        #accede a la info de camper matriculado
+        for key, camper in matriculados.items():
+            print(f"Camper ID: {key}")
+            for field, value in camper.items():
+                print(f" {field}: {value}")
+            print("\n" + "-"*30)
+    except FileNotFoundError:
+        print("El archivo 'matriculados.json' está vacio")
+
+#def viewM():
     
-    with open('matriculados.json', 'r') as archivo:
-        matriculadosA = json.load(archivo)
+#   with open('matriculados.json', 'r') as archivo:
+#       matriculadosA = json.load(archivo)
         
-    pprint(matriculadosA)
+#    pprint(matriculadosA)
 
