@@ -95,4 +95,6 @@ def see_trainer():
         print(json.dumps(trainer))
     
 # Ejemplo de uso
+
+
 see_trainer()

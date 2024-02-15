@@ -92,9 +92,19 @@ def add_trainers():
 #VISUALIZAR A LOS TRAINERS 
 
 def viewTr():
-    with open('trainers.json', 'r') as archivo:
-        data = json.load(archivo)
-    pprint(data)
+    try:
+        with open('trainers.json', 'r') as archivo:
+            data = json.load(archivo)
+        for item  in data:
+            trainers = item.get('trainers', [])
+            for trainer in trainers:
+                print(f"ID: {trainer.get('id', 'No disponible')}")
+                print(f"Nombres: {trainer.get('Nombres', 'No disponible')}")
+                print(f"Apellidos: {trainer.get('Apellidos', 'No disponible')}")
+                print("-" * 30)
+    except FileNotFoundError:
+        print("El archivo 'trainers.json' no existe")
+       
     
 #PASAR LOS APROBADOS DEL JSON DE CAMPER AL JSON DE MATRICULADOS
 def matriculados():

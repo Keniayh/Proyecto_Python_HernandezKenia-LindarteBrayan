@@ -72,7 +72,11 @@ while fin == True:
                     elif  optionsA == '3':
                         print("")
                     elif optionsA == '4':
-                        nt.add_notas()
+                        print("Has ingresado a la sección de notas")
+                        print("1. Nota inicial \t2. Nota modulos")
+                        opN = input("Dijite número según la opción a la que deseas ingresar: ")
+                        if opN == '1':
+                            nt.add_notas()
                     else:
                         if optionsA == '5':
                             f = False
@@ -90,12 +94,16 @@ while fin == True:
                         lejo.letrerito()
                         pprint("Rutas de entrenamiento: ")
                         mod.viewR()
+                        limpiarPantalla()
                     elif optionR == '2':
                         lejo.letrerito()
                         print("Has ingresado a la sección de crear rutas.")
                         mod.newRuta()
-                        print("Felicidades")
+                        print("Felicidades has creado la ruta con exito!")
                         limpiarPantalla()
+                    elif optionR > '3':
+                        print("Error:")
+                        print("Favor digitar un número que este entre 1 - 5")
                     else:
                         if optionR == '3':
                             n = False
@@ -108,6 +116,9 @@ while fin == True:
                 print("4. Campers que se encuentran con bajo rendimiento \n5. Campers y los trainer que se encuentren asociados a una ruta de entrenamiento")
                 print("6. Número de campers que perdieron y aprobaron cada uno de los módulos")
                 lejo.reports()
+            elif optionsAC > '5':
+                print("Error:")
+                print("Favor digitar un número que este entre 1 - 5")
             else:
                 if optionsAC == '5':
                     m = False
@@ -126,8 +137,10 @@ while fin == True:
             limpiarPantalla()
             print("Ingresa tu número de identificación.")
             trainerN = input("Número de identificación: ")
+    elif rta > '3':
+        print("Error")
+        print("Favor digitar un número que este entre 1 - 3")
     else:
           
         if rta == '3':
             fin = False
-        break
