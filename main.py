@@ -1,7 +1,6 @@
 import os
 import json
 from pprint import pprint
-import campers as moca
 import modulo as mod
 import fuctionMenu as lejo
 import notas as nt
@@ -51,7 +50,7 @@ while fin == True:
                     elif optionTr == '2':
                         print("")
                     elif optionTr == '3':
-                        print("")
+                        mod.viewTr()
                     else:
                         if optionTr == '4':
                             x = False
@@ -66,9 +65,19 @@ while fin == True:
                     limpiarPantalla()
                     if optionsA == '1':
                         print("Favor ingresar datos del estudiante: ")
-                        moca.add_campers()
+                        mod.check_fields_complete()
+                        mod.add_campers()
+                        limpiarPantalla()
+                        print("Listo!")
                     elif optionsA == '2':
-                        print("aun no")
+                        print("Deseas actualizar los campers que han sido aprobados?")
+                        sd = input("Ingresa si/no: ")
+                        minu = sd.lower
+                        if sd == 'si':
+                            mod.matriculas()
+                            print("Se ha actualizado con exito, puedes ver los cambios 'Reportes'")
+                        elif sd == 'no':
+                            print("")
                     elif  optionsA == '3':
                         print("")
                     elif optionsA == '4':
@@ -77,6 +86,14 @@ while fin == True:
                         opN = input("Dijite número según la opción a la que deseas ingresar: ")
                         if opN == '1':
                             nt.add_notas()
+                        elif opN == '2':
+                            print("")
+                        elif opN > '2':
+                            print("Error:")
+                            print("Favor ingresar un número entre 1 - 2")
+                    elif optionsA > '5':
+                        print("Error:")
+                        print("Favor ingresar un núumero entre 1 - 5")
                     else:
                         if optionsA == '5':
                             f = False
@@ -116,7 +133,7 @@ while fin == True:
                 print("4. Campers que se encuentran con bajo rendimiento \n5. Campers y los trainer que se encuentren asociados a una ruta de entrenamiento")
                 print("6. Número de campers que perdieron y aprobaron cada uno de los módulos")
                 lejo.reports()
-            elif optionsAC > '5':
+            elif optionsAC > '6':
                 print("Error:")
                 print("Favor digitar un número que este entre 1 - 5")
             else:

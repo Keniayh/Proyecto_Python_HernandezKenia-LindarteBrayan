@@ -1,5 +1,5 @@
 import modulo as mod
-import main as lok
+import os
 def letrerito():
     print("------------------------------")
     print("-       ROL COORDINACIÓN     -")
@@ -11,23 +11,29 @@ def letrero():
     print("-         ROL TRAINERS       -")
     print("------------------------------")
 
+def limpiarPantalla():
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
+        
 def reports():
     repor = input("Digite el número según la sección a la que deseas ingresar: ")
     if repor == '1':
         print("")
-        lok.limpiarPantalla()
+        limpiarPantalla()
     elif repor == '2':
         mod.viewMa()
-        lok.limpiarpantalla()
+        limpiarPantalla()
     elif repor == '3':
         mod.viewTr()
-        lok.limpiarPantalla()
+        limpiarPantalla()
     elif repor == '4':
         print("")
-        lok.limpiarPantalla()
+        limpiarPantalla()
     elif repor == '5':
         print("")
-        lok.limpiarPantalla()
+        limpiarPantalla()
     elif repor == '6':
         print("")
-        lok.limpiarPantalla()
+        limpiarPantalla()
