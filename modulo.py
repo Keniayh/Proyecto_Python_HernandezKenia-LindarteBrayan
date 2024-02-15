@@ -1,34 +1,13 @@
 import json
 from pprint import pprint
-def add_campers():
-    # Cargar el diccionario existente
-    try:
-        with open('campers.json', 'r') as archivo:
-            data_existing = json.load(archivo)
-    except FileNotFoundError:
-        data_existing = []
-    
-    # Solicitar datos del nuevo estudiante
-    new_camper = {
-        "id": int(input('Identificación: ')),
-        "Nombres": input('Nombres: '),
-        "Apellidos": input('Apellidos: '),
-        "Dirección": input('Dirección: '),
-        "Acudiente": input('Acudiente: '),
-        "Contacto": {
-            "Celular": int(input('Celular: ')),
-            "Fijo": int(input('Fijo: '))
-        },
-        "Estado": input('Estado: '),
-        "Riesgo": input('Riesgo: ')
-    }
-    
-   # Agregar el nuevo estudiante a la lista existente
-    data_existing.append(new_camper)
-    
-    # Escribir los datos en el archivo JSON
-    with open('campers.json', 'w') as archivo:
-        json.dump(data_existing, archivo)
+
+def check_fields_complete(camper):
+    required_fields = ['Nombres', 'Apellidos', 'Dirección', 'Acudiente', 'Contacto', 'Riesgo']
+    for field in required_fields:
+        if not camper.get(field):
+            return False
+    return True
+
 #CRUD RUTAS
 
 def newRuta():
@@ -107,7 +86,8 @@ def viewTr():
        
     
 #PASAR LOS APROBADOS DEL JSON DE CAMPER AL JSON DE MATRICULADOS
-def matriculados():
+
+def matriculas():
     try:
         with open('campers.json', 'r') as archivo:
             data = json.load(archivo)
@@ -141,7 +121,8 @@ def matriculados():
     
     with open('campers.json', 'w') as archivo:
         json.dump(matri, archivo, indent = 2)  
-
+        
+matriculas()
 #VER LOS CAMPRS MATRICULADOS, POR ENDE APROBADOS 
 def viewMa():
     try:

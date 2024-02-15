@@ -56,5 +56,3 @@ def add_campers():
     
     with open('notas.json', 'w') as archivo:
         json.dump(notas_data, archivo)
-
-# Ejemplo de uso

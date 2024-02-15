@@ -31,6 +31,3 @@ def reports():
     elif repor == '6':
         print("")
         lok.limpiarPantalla()
-
-
-

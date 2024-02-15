@@ -48,4 +48,4 @@ def matriculados():
     with open('matriculados.json', 'w') as archivo:
         json.dump(matriculas, archivo, indent=2)
 
-matriculados()
+
